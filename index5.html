@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas - TGreen Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+             background-image: url('./img2.png'); /* Replace 'background-img2.png' with your image file */
+            background-size: cover;
+            background-repeat: no-repeat;
+            }
+     
+        header {
+            background-image: url('./img2.png'); /* Replace 'background-img2.png' with your image file */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        .reviews {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+        }
+        .review {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .review p {
+            font-size: 16px;
+        }
+        .stars {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .stars input[type="radio"] {
+            display: none;
+        }
+        .stars label {
+            cursor: pointer;
+            font-size: 20px;
+            color: #f7f7f7;
+        }
+        .stars label:before {
+            content: "★";
+        }
+        .stars input[type="radio"]:checked ~ label {
+            color: #ffcc00;
+        }
+        .review form {
+            margin-top: 20px;
+        }
+        .review textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .review input[type="submit"] {
+            background-color: #1e5799;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .review input[type="submit"]:hover {
+            background-color: #0c355f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Reseñas - TGreen Solutions</h1>
+    </header>
+    <div class="reviews">
+        <h2>Reseñas de Nuestros Clientes</h2>
+    
+
+        <h2>Dejar una Reseña</h2>
+        <form action="procesar_reseña.php" method="post">
+            <textarea name="comentario" rows="4" cols="50" placeholder="Escribe tu reseña aquí" required></textarea>
+            <div class="stars">
+                <input type="radio" id="star11" name="rating" value="5" />
+                <label for="star11"></label>
+                <input type="radio" id="star12" name="rating" value="4" />
+                <label for="star12"></label>
+                <input type="radio" id="star13" name="rating" value="3" />
+                <label for="star13"></label>
+                <input type="radio" id="star14" name="rating" value="2" />
+                <label for="star14"></label>
+                <input type="radio" id="star15" name="rating" value="1" />
+                <label for="star15"></label>
+            </div>
+            <br>
+            <input type="submit" value="Enviar Reseña">
+        </form>
+    </div>
+</body>
+</html>
